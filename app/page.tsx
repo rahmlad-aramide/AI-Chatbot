@@ -5,12 +5,12 @@ import { LandingLayout } from "@/components/landing-layout";
 
 export default function Home() {
   return (
-      <LandingLayout>
+    <LandingLayout>
       <main className="flex flex-col w-full max-w-[1249px] mx-auto pt-[129px]">
         <Hero />
         <Features />
         <Testimonials />
       </main>
-      </LandingLayout>
+    </LandingLayout>
   );
 }

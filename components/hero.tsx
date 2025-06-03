@@ -17,7 +17,10 @@ export const Hero = () => {
           and connect with a global community — all in one AI-driven platform.
         </p>
         <div className="flex flex-row justify-center gap-4 md:gap-20 max-w-[300px] md:max-w-full mx-auto">
-          <Button variant={"outline"} className="px-4 xs:px-7 md:px-11 text-xs xs:text-base bg-[#010101]">
+          <Button
+            variant={"outline"}
+            className="px-4 xs:px-7 md:px-11 text-xs xs:text-base bg-[#010101]"
+          >
             Watch Demo
           </Button>
           <Button asChild className="px-4 xs:px-7 text-xs xs:text-base">

@@ -43,7 +43,7 @@ export const Navbar = () => {
     <nav className="flex justify-between h-14 sticky top-0 bg-[#010101] z-50 md:h-20 items-center w-full max-w-[1249px] mx-auto font-(family-name:--font-poppins)">
       <div className="flex flex-row-reverse items-center gap-2 xs:gap-4">
         <Link href="/" className="text-xl xs:text-2xl md:text-3xl">
-            AI Chatbot
+          AI Chatbot
         </Link>
         {/* Mobile Menu (Hamburger Icon) */}
         <div className="md:hidden">
@@ -53,12 +53,15 @@ export const Navbar = () => {
                 <MenuIcon className="size-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[350px] px-5 bg-[#010101] border-r border-white/20">
+            <SheetContent
+              side="left"
+              className="w-[300px] sm:w-[350px] px-5 bg-[#010101] border-r border-white/20"
+            >
               <SheetHeader className="px-0">
                 <SheetTitle asChild>
-                <Link href="/" className="text-2xl w-fit">
-                  AI Chatbot
-                </Link>
+                  <Link href="/" className="text-2xl w-fit">
+                    AI Chatbot
+                  </Link>
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-4">
@@ -93,14 +96,21 @@ export const Navbar = () => {
       {/* Desktop navigation links (hidden below md) */}
       <div className="hidden md:flex items-center gap-5">
         {navLinks.map((link, idx) => (
-          <Link key={idx} href={link.href} className="text-sm font-semibold underline underline-offset-2 decoration-transparent hover:decoration-primary">
+          <Link
+            key={idx}
+            href={link.href}
+            className="text-sm font-semibold underline underline-offset-2 decoration-transparent hover:decoration-primary"
+          >
             {link.label}
           </Link>
         ))}
       </div>
 
       <div className="flex gap-4 md:gap-7 items-center">
-        <Link href={"#"} className="hidden lg:flex text-sm font-semibold underline underline-offset-2 decoration-transparent hover:decoration-primary">
+        <Link
+          href={"#"}
+          className="hidden lg:flex text-sm font-semibold underline underline-offset-2 decoration-transparent hover:decoration-primary"
+        >
           Watch Demo
         </Link>
         <Button asChild size={"sm"} className="hidden md:inline-block">
@@ -109,7 +119,6 @@ export const Navbar = () => {
         <Button asChild size={"sm"} className="h-8 md:hidden px-5 xs:px-10">
           <Link href="/signup">Join</Link>
         </Button>
-
       </div>
     </nav>
   );

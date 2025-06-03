@@ -49,7 +49,10 @@ export const PricingPlans = () => {
     },
   ];
   return (
-    <section id="pricing" className="flex flex-col gap-11 py-[31px] w-full max-w-[1240px] mx-auto px-3.5 md:px-10 font-(family-name:--font-inter)">
+    <section
+      id="pricing"
+      className="flex flex-col gap-11 py-[31px] w-full max-w-[1240px] mx-auto px-3.5 md:px-10 font-(family-name:--font-inter)"
+    >
       <div className="flex flex-col items-center gap-2">
         <h3 className="text-xl font-bold">Upgrade your plan</h3>
         <p className="text-[#52575D] text-sm">
@@ -64,21 +67,19 @@ export const PricingPlans = () => {
           >
             <h6 className="font-semibold">{plan.plan}</h6>
             <div className="flex items-center gap-2 mt-4 mb-8">
-                <div className="font-extrabold text-4xl">${plan.price}</div>
-                <div className="flex flex-col items-center">
-                    <div className="text-[#868C92] text-xs">per editor/month</div>
-                    <div className="text-[#868C92] text-xs">billed monthly</div>
-                </div>
+              <div className="font-extrabold text-4xl">${plan.price}</div>
+              <div className="flex flex-col items-center">
+                <div className="text-[#868C92] text-xs">per editor/month</div>
+                <div className="text-[#868C92] text-xs">billed monthly</div>
+              </div>
             </div>
             <div>
-                {plan.values.map((v, idx)=>(
-                    <div key={idx} className="flex">
-                        <div>
-                            
-                        </div>
-                        <div className="text-[#D2D7D9] font-light text-sm">{v}</div>
-                    </div>
-                ))}
+              {plan.values.map((v, idx) => (
+                <div key={idx} className="flex">
+                  <div></div>
+                  <div className="text-[#D2D7D9] font-light text-sm">{v}</div>
+                </div>
+              ))}
             </div>
           </div>
         ))}

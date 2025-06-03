@@ -58,7 +58,10 @@ export const SubscriptionForm = () => {
                     </FormControl>
                     <FormMessage className="flex xs:hidden" />
                   </Box>
-                  <Button type="submit" className="w-full xs:w-fit px-4.5 h-14 self-end">
+                  <Button
+                    type="submit"
+                    className="w-full xs:w-fit px-4.5 h-14 self-end"
+                  >
                     Subscribe
                   </Button>
                 </Box>

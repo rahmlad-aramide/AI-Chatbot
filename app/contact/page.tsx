@@ -27,23 +27,29 @@ export default function Contact() {
           </div>
           <div className="flex flex-col xs:flex-row md:flex-col lg:flex-row gap-5">
             <div className="flex flex-col gap-2 max-w-[233px]">
-                <h3 className="text-xl font-bold">Customer Support</h3>
-                <p className="opacity-80">Our support team is available around the clock to address  any concern or queries you may have</p>
+              <h3 className="text-xl font-bold">Customer Support</h3>
+              <p className="opacity-80">
+                Our support team is available around the clock to address any
+                concern or queries you may have
+              </p>
             </div>
             <div className="flex flex-col gap-2 max-w-[233px]">
-                <h3 className="text-xl font-bold">Feedback</h3>
-                <p className="opacity-80">We value your feedback and we continously working to improve AI Chatbot.</p>
+              <h3 className="text-xl font-bold">Feedback</h3>
+              <p className="opacity-80">
+                We value your feedback and we continously working to improve AI
+                Chatbot.
+              </p>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-12 w-full md:w-1/2 xl:w-2/5 max-w-[500px] bg-[#0A0A0A] px-6 pt-10.5 pb-[51px] mx-auto md:ml-auto mt-10 md:mt-0">
-            <div className="flex flex-col gap-4">
-                <h2 className="font-bold text-xl">Get in Touch</h2>
-                <p className="font-medium opacity-50">You can reach us anytime</p>
-            </div>
-            <div>
-                <ContactForm />
-            </div>
+          <div className="flex flex-col gap-4">
+            <h2 className="font-bold text-xl">Get in Touch</h2>
+            <p className="font-medium opacity-50">You can reach us anytime</p>
+          </div>
+          <div>
+            <ContactForm />
+          </div>
         </div>
       </main>
     </LandingLayout>
