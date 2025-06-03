@@ -9,6 +9,7 @@
   --font-inter: var(--font-inter);
   --font-lato: var(--font-lato);
   --font-poppins: var(--font-poppins);
+  --breakpoint-xs: 30rem;
   --shadow-ask-input: 0px 19px 29px 0px #1e1f2233;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -83,6 +84,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
