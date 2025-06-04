@@ -4,10 +4,9 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-
-import Image from "next/image";
-import user from "@/assets/images/user.png";
 import { ModelSelect } from "./ModelSelect";
+import { UserDropdown } from "./UserDropdown";
+
 
 export default function DashboardLayout({
   children,
@@ -26,13 +25,8 @@ export default function DashboardLayout({
               <ModelSelect />
             </div>
             <div>
-              <Image
-                src={user}
-                width={120}
-                height={120}
-                alt="Profile photo"
-                className="h-14 md:h-[60px] w-auto"
-              />
+              {/* user dropdown */}
+              <UserDropdown />
             </div>
           </div>
         </header>

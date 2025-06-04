@@ -2,40 +2,26 @@ import Link from "next/link";
 import { SubscriptionForm } from "./subscription-form";
 
 export const Footer = () => {
-  //     Features
-  // Support
-  // Socials
-  // Voice AI
-  // How It Works
-  // Twitter
-  // Chatbot
-  // Contact us
-  // Facebook
-  // Flashcards
-  // Privacy Policy
-  // Instagram
-  // Community
-  // Terms of Service
-  // Tiktok
+
   const featuresLinks = [
     {
       heading: "Features",
       links: [
         {
           label: "Voice AI",
-          href: "/#",
+          href: "/home",
         },
         {
           label: "Chatbot",
-          href: "/#",
+          href: "/home",
         },
         {
           label: "Flashcards",
-          href: "/#",
+          href: "/flashcards",
         },
         {
           label: "Community",
-          href: "/#",
+          href: "/community",
         },
       ],
     },
@@ -46,7 +32,7 @@ export const Footer = () => {
       links: [
         {
           label: "How It Works",
-          href: "/#",
+          href: "/#how-it-works",
         },
         {
           label: "Contact us",

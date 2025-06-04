@@ -33,7 +33,9 @@ export const ContactForm = () => {
     phone: z.number().min(11, {
       message: "Phone number must be at least 1 characters.",
     }),
-    message: z.string({ required_error: "What message do you have for us?" }),
+    message: z.string({ required_error: "What message do you have for us?" }).min(10, {
+      message: "What message do you have for us?"
+    }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -42,7 +44,7 @@ export const ContactForm = () => {
       email: "",
       firstname: "",
       lastname: "",
-      phone: +234,
+      phone: undefined,
       message: "",
     },
   });
