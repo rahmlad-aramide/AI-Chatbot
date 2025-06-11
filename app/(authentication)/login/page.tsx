@@ -32,12 +32,12 @@ export default function SignUp() {
         </div>
         <div className="flex justify-center">
           <p className="text-[#6C6C6C]">
-            Already have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
-              href={"/login"}
+              href={"/signup"}
               className="text-primary underline underline-offset-4"
             >
-              Sign in
+              Sign up
             </Link>
           </p>
         </div>
