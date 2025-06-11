@@ -5,15 +5,15 @@ export default function Page() {
     <LandingLayout>
       <main className="flex flex-col gap-[55px] pt-[109px]">
         <div className="container mx-auto px-4 md:px-10">
-          <div className="bg-primary h-fit min-h-[210px] flex flex-col gap-4 items-center justify-center text-black/80">
-            <h1 className="text-[64px] text-black font-medium leading-tight">
+          <div className="bg-primary px-4 h-fit min-h-[210px] flex flex-col gap-4 items-center justify-center text-black/80">
+            <h1 className="text-3xl md:text-[64px] text-black font-medium leading-tight">
               Privacy Policy
             </h1>
-            <p className="text-xl">Effective date: May 23, 2025</p>
+            <p className="text-base md:text-xl">Effective date: May 23, 2025</p>
           </div>
         </div>
-        <div className="container mx-auto px-4 md:px-10 py-8">
-          <h2 className="text-xl font-bold mb-14">
+        <div className="container mx-auto px-4 md:px-10 md:py-8">
+          <h2 className="text-xl font-bold mb-7 md:mb-14">
             Privacy Policy for AIChatbot
           </h2>
 
@@ -31,7 +31,7 @@ export default function Page() {
             <p className="text-base mb-2">
               When you sign up or contact us, we may collect:
             </p>
-            <ul className="list-disc text-base ml-6">
+            <ul className="list-disc text-base ml-6 mb-2">
               <li>Full Name</li>
               <li>Email Address</li>
               <li>Company Name (optional)</li>
@@ -44,7 +44,7 @@ export default function Page() {
               We automatically collect non-personal information about how you
               use our site, such as:
             </p>
-            <ul className="list-disc text-base ml-6">
+            <ul className="list-disc text-base ml-6 mb-2">
               <li>IP Address</li>
               <li>Browser Type</li>
               <li>Device Information</li>
@@ -67,7 +67,7 @@ export default function Page() {
             <p className="text-base mb-2">
               We use the information we collect to:
             </p>
-            <ul className="list-disc ml-4 text-base">
+            <ul className="list-disc ml-4 text-base mb-2">
               <li>Provide and manage access to our services</li>
               <li>Respond to your inquiries and support requests</li>
               <li>
@@ -162,7 +162,7 @@ export default function Page() {
               country of residence, you consent to transferring your data to our
               servers based in
               <span className="font-semibold">
-                [Your Server Location, e.g., United States]
+                East United States
               </span>
               .
             </p>

@@ -4,6 +4,7 @@ export const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
 export const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
   variable: "--font-lato",

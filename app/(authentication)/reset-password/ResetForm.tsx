@@ -56,7 +56,7 @@ export const ResetForm = () => {
                 Reset Password
               </Button>
             </DialogTrigger>
-            <DialogContent hasClose={false}>
+            <DialogContent hasClose={false} overlayOpacity={100}>
               <DialogHeader className="gap-5">
                 <DialogTitle>Password has been changed</DialogTitle>
                 <DialogDescription>

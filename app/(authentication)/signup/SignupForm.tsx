@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+// import Cookies from 'js-cookie'
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,21 +17,42 @@ import {
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "./PasswordInput";
 import Link from "next/link";
+// import { useMutation } from "@tanstack/react-query";
+
+const formSchema = z.object({
+  email: z
+    .string()
+    .min(5, {
+      message: "Email must be at least 5 characters.",
+    })
+    .email(),
+  password: z.string().min(8, {
+    message: "Password must be at least 8 characters.",
+  }),
+});
 
 export const SignupForm = () => {
   // const router = useRouter();
-
-  const formSchema = z.object({
-    email: z
-      .string()
-      .min(5, {
-        message: "Email must be at least 5 characters.",
-      })
-      .email(),
-    password: z.string().min(8, {
-      message: "Password must be at least 8 characters.",
-    }),
-  });
+// const { mutate, isPending, isSuccess } = useMutation({
+//     mutationFn: login,
+//     onSuccess: (loginData: IAdminLoginResponse) => {
+//       console.log("loginData", loginData);
+//       Cookies.set("token", loginData.token);
+//       // setToken(loginData.token);
+//       // setAuthToken(loginData.token);
+//       // setEmail("");
+//       // setPassword("");
+//       // setTimeout(()=>{
+//       //   navigation.replace("BottomNavigator");
+//       // },100)
+//     },
+//     onError: (err: Error) => {
+//       console.log("Login failed:", err);
+//       toast.error("Logging in failed!", {
+//         description: err.message || "An error occurred. Try again later!",
+//       });
+//     },
+//   });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

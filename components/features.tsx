@@ -17,14 +17,14 @@ export const Features = () => {
       >
         <div className="flex flex-col gap-10 md:gap-14">
           <div className="flex flex-col gap-3">
-            <h2 className="font-medium text-xl md:text-3xl font-(family-name:--font-poppins)">
+            <h2 className="font-medium text-lg md:text-3xl font-(family-name:--font-poppins)">
               Engage, Learn, and Connect{" "}
               <span className="opacity-50">
                 with AI-Powered Conversations – Experience the Future of Voice
                 and Chat Interaction.
               </span>
             </h2>
-            <Button asChild className="px-6 md:px-14 w-fit md:text-lg">
+            <Button asChild className="px-6 md:px-14 w-fit text-sm md:text-lg">
               <Link href="/signup">Start for free</Link>
             </Button>
           </div>

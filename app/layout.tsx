@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter, lato, poppins } from "@/fonts";
+import { Toaster } from "@/components/ui/sonner"
+import QueryProvider from "./query-provider";
 
 export const metadata: Metadata = {
   title: "AI Chatbot - Talk, Learn, and Engage with AI-Powered Conversations.",
@@ -18,7 +20,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${lato.variable} ${poppins.variable} antialiased`}
       >
-        {children}
+        <QueryProvider>
+          <>{children}</>
+          <Toaster />
+        </QueryProvider>
       </body>
     </html>
   );

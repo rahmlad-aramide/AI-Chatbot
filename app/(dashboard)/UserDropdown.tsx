@@ -42,7 +42,7 @@ export const UserDropdown = () => {
             <button
               className="w-full"
               onClick={() => {
-                // setIsSheetOpen(true);
+                setIsSheetOpen(true);
               }}
             >
               <HistoryIcon size={24} color="#232323" /> History
@@ -60,11 +60,11 @@ export const UserDropdown = () => {
         </DropdownMenuContent>
       </DropdownMenu>
       <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-        <SheetContent className="w-[243px] sm:w-[300px] pt-[94px] border-y border-white/20 bg-black">
+        <SheetContent className="w-[243px] sm:w-[300px] my-[94px] border-y border-white/20 bg-black">
           <SheetHeader className="px-0 mb-[94px]">
             <SheetTitle className="text-xl font-bold border-b border-white/20 pb-3 px-4">History</SheetTitle>
-            <SheetDescription className="flex flex-col flex-1 h-screen pb-[98px]">
-                <Box className="flex flex-col gap-8 px-2 h-screen overflow-y-auto">
+            <SheetDescription className="flex flex-col flex-1 pb-[98px] overflow-hidden">
+                <Box className="flex flex-col gap-8 px-2 overflow-y-auto h-full max-h-[calc(100vh_-_170px)]">
                     <Box className="pt-4">
                         <Box className="font-bold text-white/80">Recent</Box>
                         <ul className="flex flex-col gap-4">
@@ -86,7 +86,7 @@ export const UserDropdown = () => {
                         </ul>
                     </Box>
                     <Box className="pt-4">
-                        <Box className="font-bold text-white/80">7days ago</Box>
+                        <Box className="font-bold text-white/80">A month ago</Box>
                         <ul className="flex flex-col gap-4">
                             {Array.from({length: 10}).map((_, idx)=> (
                                 <li key={idx}>

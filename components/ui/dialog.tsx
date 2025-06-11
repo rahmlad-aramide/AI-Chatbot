@@ -30,15 +30,21 @@ function DialogClose({
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
+interface DialogOverlayProps extends React.ComponentProps<typeof DialogPrimitive.Overlay> {
+  opacity?: number
+}
 function DialogOverlay({
   className,
+  opacity,
   ...props
-}: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
+}: DialogOverlayProps) {
+  const calculatedOpacity = opacity !== undefined ? `opacity-${opacity}` : "opacity-50";
   return (
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-background",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-background opacity-50",
+        calculatedOpacity,
         className,
       )}
       {...props}
@@ -49,21 +55,23 @@ function DialogOverlay({
 interface DialogContentProps
   extends React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> {
   hasClose?: boolean;
+  overlayOpacity?: number;
 }
 
 function DialogContent({
   className,
   children,
   hasClose = true,
+  overlayOpacity,
   ...props
 }: DialogContentProps) {
   return (
     <DialogPortal data-slot="dialog-portal">
-      <DialogOverlay />
+      <DialogOverlay opacity={overlayOpacity} />
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "bg-[#EFFFE9] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 border pb-6 pr-6 pl-12 pt-11 shadow-lg duration-200 sm:max-w-[608px] min-h-[269px]",
+          "bg-[#EFFFE9] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 border p-6 md:pl-12 md:pt-11 shadow-lg duration-200 sm:max-w-[608px] min-h-[269px]",
           className,
         )}
         {...props}

@@ -5,20 +5,20 @@ export default function Page() {
     <LandingLayout>
       <main className="flex flex-col gap-[55px] pt-[109px]">
         <div className="container mx-auto px-4 md:px-10">
-          <div className="bg-primary h-fit min-h-[210px] flex flex-col gap-4 items-center justify-center text-black/80">
-            <h1 className="text-[64px] text-black font-medium leading-tight">
+          <div className="bg-primary px-4 h-fit min-h-[210px] flex flex-col gap-4 items-center justify-center text-black/80">
+            <h1 className="text-3xl md:text-[64px] text-black font-medium leading-tight">
               Terms of Use
             </h1>
-            <p className="text-xl">Effective date: May 23, 2025</p>
+            <p className="text-base md:text-xl">Effective date: May 23, 2025</p>
           </div>
         </div>
-        <div className="container mx-auto px-4 md:px-10 py-8">
-          <h1 className="text-3xl font-bold mb-6 md:mb-10">
+        <div className="container mx-auto px-4 md:px-10 md:py-8">
+          <h2 className="text-xl font-bold mb-7 md:mb-14">
             Terms of Use for AIChatbot
-          </h1>
+          </h2>
 
           <div className="mb-8 md:mb-20">
-            <h2 className="text-xl font-semibold mb-3">Introduction</h2>
+            <h3 className="text-xl font-semibold mb-3">Introduction</h3>
             <p className="text-base">
               AI Chatbot is an AI-powered voice chatbot software-as-a-service
               (SaaS) platform that provides interactive, voice-enabled AI tools
