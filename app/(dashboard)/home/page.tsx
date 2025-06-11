@@ -28,7 +28,7 @@ export default function Page() {
   const [voice, setVoice] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [chats, setChats] = useState(false);
-  const [deleteConvo, setDeleteConvo] = useState(!false);
+  const [deleteConvo, setDeleteConvo] = useState(false);
 
   const links = [
     {

@@ -46,7 +46,7 @@ export const SignupForm = () => {
         onSuccess: (loginData: IUserRegisterResponse) => {
           console.log("loginData", loginData);
           toast.success("Registration Successful!", {
-            description: "You are being redirect...",
+            description: "You are being redirected...",
           });
           form.reset();
           router.push("/login");
